@@ -424,7 +424,7 @@ export default function Component() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <Leaf className="h-8 w-8 text-green-600" />
-              <span className="text-xl font-bold text-green-800">Shri Ramasehwar Clinic</span>
+              <span className="text-xl font-bold text-green-800">Shri Rameshwaram Clinic</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -488,7 +488,7 @@ export default function Component() {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
-              <h1 className="text-4xl lg:text-6xl font-bold text-green-800 mb-4">Shri Ramasehwar Clinic</h1>
+              <h1 className="text-4xl lg:text-6xl font-bold text-green-800 mb-4">Shri Rameshwaram Clinic</h1>
               <p className="text-xl lg:text-2xl text-green-600 mb-6 font-medium">"Healing Naturally, Caring Deeply"</p>
 
               <div className="mb-8 space-y-3">
@@ -540,12 +540,12 @@ export default function Component() {
       <section id="about" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-green-800 mb-8">About Shri Ramasehwar Clinic</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-green-800 mb-8">About Shri Rameshwaram Clinic</h2>
 
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="text-left space-y-6">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  For over <span className="font-semibold text-green-700">25+ years</span>, Shri Ramasehwar Clinic has
+                  For over <span className="font-semibold text-green-700">25+ years</span>, Shri Rameshwaram Clinic has
                   been a beacon of trust and natural healing in our community. Founded on the principles of Ayurveda and
                   traditional medicine, we believe in treating the root cause of illness rather than just the symptoms.
                 </p>
@@ -557,7 +557,7 @@ export default function Component() {
                 </p>
 
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  At Shri Ramasehwar Clinic, we don't just treat diseases – we restore wellness, vitality, and hope. Our
+                  At Shri Rameshwaram Clinic, we don't just treat diseases – we restore wellness, vitality, and hope. Our
                   mission is to provide safe, effective, and affordable natural healthcare solutions that have stood the
                   test of time.
                 </p>
@@ -774,7 +774,7 @@ export default function Component() {
                     <div>
                       <h4 className="font-semibold text-green-800">Address</h4>
                       <p className="text-gray-600">
-                        Shri Ramasehwar Clinic
+                        Shri Rameshwaram Clinic
                         <br />
                         falavda road mawana Meerut, Uttar Pradesh - 250401
                         <br />
@@ -908,14 +908,14 @@ export default function Component() {
           <div className="text-center">
             <div className="flex items-center justify-center space-x-2 mb-4">
               <Leaf className="h-8 w-8 text-green-300" />
-              <span className="text-2xl font-bold">Shri Ramasehwar Clinic</span>
+              <span className="text-2xl font-bold">Shri Rameshwaram Clinic</span>
             </div>
 
             <p className="text-green-200 mb-6 text-lg">"Your Health, Our Priority – Since Generations"</p>
 
             <div className="border-t border-green-700 pt-6">
               <p className="text-green-300">
-                © {new Date().getFullYear()} Shri Ramasehwar Clinic. All rights reserved.
+                © {new Date().getFullYear()} Shri Rameshwaram Clinic. All rights reserved.
               </p>
               <p className="text-green-400 mt-2 text-sm">Healing Naturally, Caring Deeply</p>
               <p className="text-green-400 mt-2 text-sm">🧑‍💻 Created by Divam Sharma</p>
