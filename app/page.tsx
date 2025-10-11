@@ -918,7 +918,9 @@ export default function Component() {
                 © {new Date().getFullYear()} Shri Rameshwaram Clinic. All rights reserved.
               </p>
               <p className="text-green-400 mt-2 text-sm">Healing Naturally, Caring Deeply</p>
-              <p className="text-green-400 mt-2 text-sm">🧑‍💻 Created by Divam Sharma</p>
+              <p className="text-green-400 mt-2 text-sm">
+               Website developed by <strong>Divam Sharma</strong> | Contact:
+               <a href="tel:+1234567890" class="  hover:underline">+91 9548302195</a></p>
             </div>
           </div>
         </div>
