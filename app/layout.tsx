@@ -17,7 +17,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <head />
-      <body className="bg-white text-black font-sans">{children}</body>
+      <body
+        className="bg-white text-black font-sans"
+        suppressHydrationWarning={true}
+      >
+        {children}
+      </body>
     </html>
   )
 }
