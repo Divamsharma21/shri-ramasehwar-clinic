@@ -213,58 +213,11 @@ export default function Component() {
        treatment: "Ayurvedic medicine + hand made Ayurvedic formulas",
      },
     ]
+ 
 
     return (
       <>
-        {/* Image Upload Section */}
-        {/* <div className="mb-8 bg-gradient-to-r from-green-50 to-green-100 rounded-2xl p-6 border border-green-200">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-xl font-semibold text-green-800">Manage Recovery Images</h3>
-            <Button
-              onClick={() => setUploadMode(!uploadMode)}
-              variant="outline"
-              className="border-green-600 text-green-600 hover:bg-green-50 bg-transparent"
-            >
-              {uploadMode ? "Cancel" : "Add Images"}
-            </Button>
-          </div>
-
-          {uploadMode && (
-            <div className="grid md:grid-cols-3 gap-4 mt-4">
-              {recoveryImages.map((item) => (
-                <div key={item.id} className="bg-white rounded-lg p-4 border border-green-200">
-                  <h4 className="font-medium text-green-800 mb-3">{item.condition}</h4>
-                  <div className="space-y-3">
-                    <div>
-                      <label className="block text-sm text-gray-600 mb-1">Before Image</label>
-                      <input
-                        type="file"
-                        accept="image/*"
-                        className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-green-50 file:text-green-700 hover:file:bg-green-100"
-                        onChange={(e) => {
-                          // Handle before image upload
-                          console.log("Before image selected for", item.condition, e.target.files?.[0])
-                        }}
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm text-gray-600 mb-1">After Image</label>
-                      <input
-                        type="file"
-                        accept="image/*"
-                        className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-green-50 file:text-green-700 hover:file:bg-green-100"
-                        onChange={(e) => {
-                          // Handle after image upload
-                          console.log("After image selected for", item.condition, e.target.files?.[0])
-                        }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-        </div> */}
+       
 
         <div className="grid md:grid-cols-3 gap-8">
           {recoveryImages.map((item) => (
@@ -334,9 +287,9 @@ export default function Component() {
               <div className="p-6">
                 <div className="flex items-center justify-between mb-6">
                   <h2 className="text-2xl font-bold text-green-800">{selectedImage.condition}</h2>
-                  <button onClick={() => setSelectedImage(null)} className="text-gray-500 hover:text-gray-700 p-2">
-                    <XIcon className="h-6 w-6" />
-                  </button>
+
+                  <button onClick={() => setSelectedImage(null)} className="text-gray-500 hover:text-gray-700 p-2" aria-label="Close image preview"><XIcon className="h-6 w-6" /></button>
+
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8 mb-6">
@@ -415,7 +368,19 @@ export default function Component() {
       </>
     )
   }
+   const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+   const [phone, setPhone] = useState('');
+   const [message, setMessage] = useState('');
 
+   
+ const handleform=(event)=>{
+     event.preventDefault();
+    console.log('Submitted Name:', name);
+    console.log('Submitted Email:', email);
+      console.log('Submitted phone:', phone);
+      console.log('Submitted Message:', message);
+    }
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       {/* Navigation */}
@@ -526,6 +491,7 @@ export default function Component() {
                   width={500}
                   height={400}
                   className="rounded-xl shadow-lg w-full"
+                  priority
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 bg-white rounded-full p-4 shadow-lg border-4 border-green-100">
@@ -844,7 +810,7 @@ export default function Component() {
             <div className="bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 border border-green-200">
               <h3 className="text-2xl font-semibold text-green-800 mb-6">Send us a Message</h3>
 
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleform}>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="name" className="text-green-800">
@@ -853,7 +819,10 @@ export default function Component() {
                     <Input
                       id="name"
                       placeholder="Enter your full name"
+                      
                       className="border-green-200 focus:border-green-500"
+                      value={name}
+                      onChange={(e)=>setName(e.target.value)}
                     />
                   </div>
                   <div>
@@ -864,6 +833,8 @@ export default function Component() {
                       id="phone"
                       placeholder="Enter your phone number"
                       className="border-green-200 focus:border-green-500"
+                       value={phone}
+                      onChange={(e)=>setPhone(e.target.value)}
                     />
                   </div>
                 </div>
@@ -877,6 +848,8 @@ export default function Component() {
                     type="email"
                     placeholder="Enter your email address"
                     className="border-green-200 focus:border-green-500"
+                     value={email}
+                      onChange={(e)=>setEmail(e.target.value)}
                   />
                 </div>
 
@@ -889,6 +862,8 @@ export default function Component() {
                     placeholder="Tell us about your health concerns or questions..."
                     rows={4}
                     className="border-green-200 focus:border-green-500"
+                     value={message}
+                      onChange={(e)=>setMessage(e.target.value)}
                   />
                 </div>
 
@@ -920,7 +895,7 @@ export default function Component() {
               <p className="text-green-400 mt-2 text-sm">Healing Naturally, Caring Deeply</p>
               <p className="text-green-400 mt-2 text-sm">
                Website developed by <strong>Divam Sharma</strong> | Contact:
-               <a href="tel:+1234567890" class="  hover:underline">+91 9548302195</a></p>
+               <a href="tel:+1234567890" className="  hover:underline">+91 9548302195</a></p>
             </div>
           </div>
         </div>

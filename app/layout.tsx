@@ -1,12 +1,12 @@
+
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Shri Ramasehwar Clinic',
-  description: 'Created by divam sharma',
- 
+  title: 'Shri Rameshwaram Clinic',
+  description: 'Created by Divam Sharma',
 }
 
 export default function RootLayout({
@@ -15,17 +15,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <style>{`
-html {
-  font-family: ${GeistSans.style.fontFamily};
-  --font-sans: ${GeistSans.variable};
-  --font-mono: ${GeistMono.variable};
-}
-        `}</style>
-      </head>
-      <body>{children}</body>
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+      <head />
+      <body className="bg-white text-black font-sans">{children}</body>
     </html>
   )
 }
