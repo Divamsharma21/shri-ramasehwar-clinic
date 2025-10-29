@@ -376,8 +376,8 @@ export default function Component() {
    
  const handleform=(event)=>{
      event.preventDefault();
-    console.log('Submitted Name:', name);
-    console.log('Submitted Email:', email);
+     console.log('Submitted Name:', name);
+     console.log('Submitted Email:', email);
       console.log('Submitted phone:', phone);
       console.log('Submitted Message:', message);
     }

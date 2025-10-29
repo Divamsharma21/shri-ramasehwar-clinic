@@ -7,6 +7,9 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Shri Rameshwaram Clinic',
   description: 'Created by Divam Sharma',
+   icons: {
+    icon: '/favicon.png', // or '/favicon.ico'
+  },
 }
 
 export default function RootLayout({
