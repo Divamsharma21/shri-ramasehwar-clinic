@@ -5,10 +5,26 @@ import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Shri Rameshwaram Clinic',
-  description: 'Created by Divam Sharma',
-   icons: {
+   title: 'Shri Rameshwaram Clinic',
+  description: 'Expert healthcare and wellness services using Ayurvedic treatment.',
+  icons: {
     icon: '/favicon.png', // or '/favicon.ico'
+  },
+  openGraph: {
+    title: 'Shri Rameshwaram Clinic',
+    description: 'Expert healthcare and wellness services using Ayurvedic treatment.',
+    url: 'https://shrirameshwaramclinic.com',
+    siteName: 'Shri Rameshwaram Clinic',
+    images: [
+      {
+        url: '/favicon.png',
+        width: 512,
+        height: 512,
+        alt: 'Shri Rameshwaram Clinic Logo',
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
   },
 }
 
